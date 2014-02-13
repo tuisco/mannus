@@ -11,3 +11,4 @@ pom.xml.asc
 /targets/
 .lein-deps-sum
 configure.json
+resources/public/js/*

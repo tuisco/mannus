@@ -3,5 +3,54 @@ html(lang = 'en')
   head
     title
       | Ratings and Reviews are awesome
+    script(src='js/mannus.js')
+    link(rel='stylesheet', href='css/mannus.css')
   body
-    p Hello is it me you're looking for, no...
+    header
+      .centre
+        img(src="images/logo.png")
+        h1
+          | 100% confirmed purchased, 100% independently collected, impartial and trustworthy reviews!
+    section#social
+    section#container
+      .centre
+        #sidebar
+          #info
+            #image
+              img(src='images/product_image.png')
+            #score
+              | 0
+            #out 
+              | out of 10
+            #based
+              | (Based on 0 reviews)
+          nav
+            ul.product
+              li
+                a(href="#") Customer Reviews
+                span
+                  | >
+              li
+                a(href="#") Questions and Answers
+                span
+                  | >
+              li
+                a(href="#") Reviews of (retailer)
+                span
+                  | >
+            ul.reevoo
+              li
+                a(href="#") About Reevoo(TM)
+              li
+                a(href="#") Consumer promise
+        #mainbar
+          h1
+            | Reviews of (name_of_product_or_service)
+          #content
+            #most_helpful
+            #segments
+            #reviews
+              .review(data-review-id='12345'  )
+        .clear
+
+
