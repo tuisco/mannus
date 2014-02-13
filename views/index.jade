@@ -3,7 +3,6 @@ html(lang = 'en')
   head
     title
       | Ratings and Reviews are awesome
-    script(src='js/mannus.js')
     link(rel='stylesheet', href='css/mannus.css')
   body
     header
@@ -27,7 +26,7 @@ html(lang = 'en')
           nav
             ul.product
               li
-                a(href="#") Customer Reviews
+                a#customer_reviews(href="#") Customer Reviews
                 span
                   | >
               li
@@ -53,4 +52,4 @@ html(lang = 'en')
               .review(data-review-id='12345'  )
         .clear
 
-
+    script(src='js/mannus.js')

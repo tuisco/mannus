@@ -6,7 +6,8 @@
                  [compojure "1.1.6"]
                  [http-kit "2.1.16"]
                  [clj-jade "0.1.4"]
-                 [cheshire "5.3.1"]]
+                 [cheshire "5.3.1"]
+                 [domina "1.0.2"]]
   :main mannus.handler
   :plugins [[lein-ring "0.8.10"]
             [lein-cljsbuild "1.0.2"]]

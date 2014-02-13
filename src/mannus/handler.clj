@@ -6,15 +6,14 @@
             [clj-jade.core :as jade]
             [cheshire.core :refer :all]))
 
-(def records (parse-stream (clojure.java.io/reader "./configure.json") (fn [k] (keyword k))))
-
 (jade/configure {:template-dir "views/"
                  :pretty-print true
                  :cache? true})
+
+(def records (parse-stream (clojure.java.io/reader "./configure.json") (fn [k] (keyword k))))
 (defn options [sku] {:timeout 200 
                      :query-params {:sku sku} 
                      :basic-auth [(:username records) (:password records)]})
-
 (defn visit-api [url options]
   (let [{:keys [status headers body error] :as resp} @(http/get url options)]
     (if error "ERROR ERROR JUNGLE IS MASSIVE" body)))
