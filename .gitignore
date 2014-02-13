@@ -10,3 +10,4 @@ pom.xml.asc
 /.nrepl-port
 /targets/
 .lein-deps-sum
+configure.json
