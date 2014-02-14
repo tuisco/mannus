@@ -19,7 +19,7 @@
     (if error "ERROR ERROR JUNGLE IS MASSIVE" body)))
 
 (defroutes app-routes
-  (GET "/" [] (jade/render "index.jade" {}))
+  (GET "/" {{trkref :trkref sku :sku} :params} (jade/render "index.jade" { :sku sku :trkref trkref }))
   (GET "/reviewable" {{trkref :trkref sku :sku} :params}
     (visit-api (str "http://localhost:3001/v4/organisations/" trkref "/reviewable.json") (options sku)))
   (GET "/reviews" {{trkref :trkref sku :sku} :params}
@@ -28,4 +28,4 @@
   (route/not-found "Not Found"))
 
 (def app
-  (handler/site app-routes))
+  (-> #'app-routes handler/site))
