@@ -194,12 +194,6 @@ section#container .centre #sidebar ul.product li {
 section#container .centre #sidebar ul.product li:hover {
   background-color: #efefef;
 }
-section#container .centre #sidebar ul.product li:hover span {
-  display: inline;
-}
-section#container .centre #sidebar ul.product li span {
-  display: none;
-}
 section#container .centre #sidebar ul.product li a {
   padding-left: 15px;
   font-weight: bolder;
@@ -226,4 +220,16 @@ section#container .centre #mainbar h1{
   font-weight: normal;
   padding-bottom: 25px;
   border-bottom: solid 2px #efefef;
+}
+#reviews{
+  width: 740px;
+}
+.review {
+  border-bottom: 2px dotted #efefef;
+  padding: 20px 0;
+
+}
+#image img{
+  width: 150px;
+  height: 130px;
 }

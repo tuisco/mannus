@@ -21,22 +21,19 @@ html(lang = 'en')
               | 0
             #out 
               | out of 10
-            #based
-              | (Based on 0 reviews)
-          nav
+            p
+              | (Based on 
+              span#based
+                0
+              |  reviews)
+          nav#nav
             ul.product
               li
                 a#customer_reviews(href="#") Customer Reviews
-                span
-                  | >
               li
                 a(href="#") Questions and Answers
-                span
-                  | >
-              li
+              li#retailer-name
                 a(href="#") Reviews of (retailer)
-                span
-                  | >
             ul.reevoo
               li
                 a(href="#") About Reevoo(TM)
@@ -55,4 +52,5 @@ html(lang = 'en')
     script(src='http://fb.me/react-0.8.0.min.js')
     script
       var sku = '#{sku}', trkref = '#{trkref}';
+    script(src='js/views.js')  
     script(src='js/mannus.js')

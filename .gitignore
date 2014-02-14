@@ -11,6 +11,4 @@ pom.xml.asc
 /targets/
 .lein-deps-sum
 configure.json
-resources/public/js/views.js
-resources/public/js/.module-cache
-resources/public/js/.lock.pid
+resources/public/js/*
